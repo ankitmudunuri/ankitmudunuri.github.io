@@ -1,0 +1,2 @@
+- Use Maison Neue Light for subheadings on the first page
+- Use Maison Neue Book for name and big heading

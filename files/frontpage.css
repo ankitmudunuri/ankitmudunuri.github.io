@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'MaisonNeueRegular';
+  src: url("fonts/MaisonNeue-Book.woff2") format('woff2');
+}
+
+.main_header {
+  font-family: 'MaisonNeueRegular';
+  font-size: 40px;
+}
