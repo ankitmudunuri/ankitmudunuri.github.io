@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MaisonNeueRegular';
-  src: url("/fonts/MaisonNeue-Book.woff2") format('woff2');
+  src: url("fonts/MaisonNeue-Book.woff2") format('woff2');
 }
 
 .mainpage{
@@ -84,13 +84,25 @@
   border-radius: 30%;
 }
 
+.topsection_mainpage{
+  background-image: url("/images/Abstract_white_swirl_thimg6.jpeg");
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:70%;
+  width:100%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #main {
   transition: margin-left .5s;
   padding: 20px;
 }
 
 
-@media screen and (max-width: 450px) {
-  .sidenav {padding-top: 15px;}
+@media screen and (max-width: 1000px) {
+  .sidenav {padding-top: 0px;}
   .sidenav a {font-size: 18px;}
 }
