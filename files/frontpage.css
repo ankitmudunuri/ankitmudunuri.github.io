@@ -3,6 +3,19 @@
   src: url("/fonts/MaisonNeue-Book.woff2") format('woff2');
 }
 
+.mainpage{
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main_header {
   font-family: 'MaisonNeueRegular';
   font-size: 40px;
