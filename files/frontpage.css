@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MaisonNeueRegular';
-  src: url("files/fonts/MaisonNeue-Book.woff2") format('woff2');
+  src: url("/fonts/MaisonNeue-Book.woff2") format('woff2');
 }
 
 .main_header {
@@ -21,7 +21,6 @@
   transition: 0.5s;
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -31,12 +30,10 @@
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #414141c7;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -68,19 +65,18 @@
 
 .sidenav_iconbar {
   width: 35px;
-  height: 5px;
+  height: 7px;
   background-color: rgba(255, 255, 255, 0.829);
-  margin: 6px 0;
-  border-radius: 22%;
+  margin: 5px 0;
+  border-radius: 30%;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
   padding: 20px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
