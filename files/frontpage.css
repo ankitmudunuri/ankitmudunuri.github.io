@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MaisonNeueRegular';
-  src: url("fonts/MaisonNeue-Book.woff2") format('woff2');
+  src: url("/fonts/MaisonNeue-Book.woff2") format('woff2');
 }
 
 .mainpage{
@@ -85,7 +85,7 @@
 }
 
 .topsection_mainpage{
-  background-image: url("images/background.jpeg");
+  background-image: url("/images/background.jpeg");
   position:absolute;
   top:0px;
   left:0px;
