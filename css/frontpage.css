@@ -111,3 +111,11 @@
   .description{padding-left: 5%; top:90%; padding-right:5%;}
 }
 
+@media screen and (max-width: 900px) and (max-height: 500px){
+  .main_header1{visibility: hidden;}
+  .main_header2{visibility: visible;}
+  .topsection_mainpage{background-position-y: -70px;}
+  .profile{top:60%; left:8.5%;}
+  .description{padding-left: 5%; top:90%; padding-right:5%; padding-top: 10%;}
+}
+
