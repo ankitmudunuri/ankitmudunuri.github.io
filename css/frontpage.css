@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'MaisonNeueBook';
+  src: url("../files/fonts/MaisonNeue-Book.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'MaisonNeueRegular';
+  src: url("../files/fonts/MaisonNeueMono-Regular.woff2") format('woff2');
+}
+
+.mainpage{
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.subheadings{
+  font-family: "MaisonNeueRegular";
+  font-size: 40px;
+  color:white;
+  display:inline-block;
+}
+
+.main_header1 {
+  font-family: 'MaisonNeueBook';
+  font-size: 50px;
+  color:white;
+  left:10px;
+  visibility: visible;
+}
+
+.main_header2 {
+  font-family: 'MaisonNeueBook';
+  font-size: 50px;
+  color:white;
+  left:10px;
+  visibility: hidden;
+}
+
+.topsection_mainpage{
+  background-image: url("../files/images/background_main.jpeg");
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:70%;
+  width:100%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secondary_elements{
+  animation: fadeIn 3s;
+  position:absolute;
+  width:95%;
+  left:5%;
+  top: 70%;
+}
+
+.profile{
+  position:absolute;
+  top:82%;
+  left:6.5%;
+  animation: fadeIn 2s;
+  border-radius: 5%;
+}
+
+.description{
+  font-family: "MaisonNeueRegular";
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  word-wrap: break-word;
+  top: 80%;
+  left: 25%;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+
+@media screen and (max-width: 1300px) {
+  .main_header1{visibility: hidden;}
+  .main_header2{visibility: visible;}
+  .topsection_mainpage{background-position-y: -70px;}
+  .profile{top:60%; left:8.5%;}
+}
