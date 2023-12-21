@@ -72,6 +72,12 @@
   border-radius: 5%;
 }
 
+.overview{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
 .description{
   font-family: "MaisonNeueRegular";
   font-size: 28px;
@@ -79,7 +85,7 @@
   position: absolute;
   word-wrap: break-word;
   top: 80%;
-  left: 25%;
+  padding-left:30%;
 }
 
 
@@ -94,4 +100,21 @@
   .main_header2{visibility: visible;}
   .topsection_mainpage{background-position-y: -70px;}
   .profile{top:60%; left:8.5%;}
+  .description{padding-left: 45%; top:58%; padding-right:5%;}
+}
+
+@media screen and (max-width: 900px) {
+  .main_header1{visibility: hidden;}
+  .main_header2{visibility: visible;}
+  .topsection_mainpage{background-position-y: -70px;}
+  .profile{top:60%; left:8.5%;}
+  .description{padding-left: 5%; top:90%; padding-right:5%;}
+}
+
+@media screen and (max-device-width: 450px){
+  .main_header1{visibility: hidden;}
+  .main_header2{visibility: visible;}
+  .topsection_mainpage{background-position-y: -70px;}
+  .profile{top:80%; left:8.5%;}
+  .description{padding-left: 5%; top:95%; padding-right:5%;}
 }
