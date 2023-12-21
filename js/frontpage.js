@@ -14,5 +14,6 @@ if (isMobileDevice) {
     document.getElementsByClassName("description").style.paddingLeft = "5%";
     document.getElementsByClassName("description").style.paddingRight = "5%";
     document.getElementsByClassName("description").style.top = "95%";
+    document.getElementsByClassName("description").style.paddingTop = "10%";
 }
 }
