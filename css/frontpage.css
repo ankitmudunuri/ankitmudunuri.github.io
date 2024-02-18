@@ -188,7 +188,7 @@
   .overview{display:block;}
   .profile{top:60%; left:13%;position:absolute;display:block;}
   .description{padding-left: 5%; top:90%; padding-right:5%; position: absolute;display:block; padding: 60px 10px 10px 10px }
-  .websitelinks{padding-top: 280%;width:40%;display:flex;align-items:center;flex-flow:column;padding-left:25%}
+  .websitelinks{padding-top: 300%;width:40%;display:flex;align-items:center;flex-flow:column;padding-left:25%}
   .links_about{padding-left:22%;}
   .linkbuttons{position:relative;margin-top:10%}
 }
