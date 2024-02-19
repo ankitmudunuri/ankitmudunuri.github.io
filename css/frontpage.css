@@ -9,7 +9,7 @@
 }
 
 .mainpage{
-  animation: fadeIn 1.5s;
+  animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
@@ -31,9 +31,44 @@
 .main_header1 {
   font-family: 'MaisonNeueBook';
   font-size: 50px;
+  top: 0%;
   color:white;
   left:10px;
   visibility: visible;
+  animation: fadeMove 3s;
+}
+
+@keyframes fadeMove{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeMoveProfile{
+  0%{
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeMoveLinks{
+  0%{
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .main_header2 {
@@ -47,11 +82,13 @@
 .topsection_mainpage{
   background-image: url("../files/images/background_main.jpeg");
   position:absolute;
-  top:0px;
-  left:0px;
-  height:70%;
-  width:100%;
-  background-position: 50%;
+  padding-top:10%;
+  align-self:center;
+  padding-left:15%;
+  left:7%;
+  height:45%;
+  width:70%;
+  background-position: 30%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -61,14 +98,16 @@
   position:absolute;
   width:95%;
   left:5%;
-  top: 70%;
+  top: 59%;
 }
+
+
 
 .profile{
   position:absolute;
-  top:82%;
+  top:70%;
   left:6.5%;
-  animation: fadeIn 2s;
+  animation: fadeMoveProfile 4s;
   border-radius: 5%;
 }
 
@@ -84,30 +123,33 @@
   color: white;
   position: absolute;
   word-wrap: break-word;
-  top: 80%;
-  padding-left:30%;
+  top: 72%;
+  padding-left:28%;
+  animation: fadeMove 3.5s;
 }
 
 .websitelinks{
   display:flex;
   align-items: center;
-  padding-top:67%;
+  padding-top:58%;
   padding-bottom:10%;
   width: 100%;
+  animation: fadeMoveLinks 6s;
 }
 
 .linkbuttons{
   border-color:white;
   background-color:black;
   padding:15px;
+  border-radius: 5px;
   color:white;
   font-family:"MaisonNeueRegular";
   font-size: 36px;
-  animation: colorFadeOut 0.5s forwards;
+  animation: colorFadeOut 0.2s forwards;
 }
 
 .linkbuttons:hover{
-  animation: colorFade 0.5s forwards;
+  animation: colorFade 0.2s forwards;
 }
 
 @keyframes colorFade{
@@ -115,13 +157,13 @@
     background-color: black;
   }
   100% {
-    background-color: darkgray;
+    background-color: rgb(87, 87, 87);
   }
 }
 
 @keyframes colorFadeOut{
   0% {
-    background-color: darkgray;
+    background-color: rgb(87, 87, 87);
   }
   100% {
     background-color: black;
@@ -131,7 +173,21 @@
 .links_about{
   text-decoration: none;
   padding-left:10%;
-  display:inline-block;
+  position:relative;
+  left: 10%;
+  display:block;
+  border: 2px solid white;
+  background-color:black;
+  padding:15px;
+  border-radius: 5px;
+  color:white;
+  font-family:"MaisonNeueRegular";
+  font-size: 36px;
+  animation: colorFadeOut 0.2s forwards;
+}
+
+.links_about:hover{
+  animation: colorFade 0.2s forwards;
 }
 
 .links_about:visited{
@@ -140,8 +196,22 @@
 
 .links_projects{
   text-decoration: none;
-  padding-left:20%;
-  display:inline-block;
+  padding-left:10%;
+  position:relative;
+  left: 30%;
+  display:block;
+  border: 2px solid white;
+  background-color:black;
+  padding:15px;
+  border-radius: 5px;
+  color:white;
+  font-family:"MaisonNeueRegular";
+  font-size: 36px;
+  animation: colorFadeOut 0.2s forwards;
+}
+
+.links_projects:hover{
+  animation: colorFade 0.2s forwards;
 }
 
 .links_projects:visited{
@@ -150,8 +220,22 @@
 
 .links_experiences{
   text-decoration: none;
-  padding-left:20%;
-  display:inline-block;
+  padding-left:10%;
+  position:relative;
+  left: 50%;
+  display:block;
+  border: 2px solid white;
+  background-color:black;
+  padding:15px;
+  border-radius: 5px;
+  color:white;
+  font-family:"MaisonNeueRegular";
+  font-size: 36px;
+  animation: colorFadeOut 0.2s forwards;
+}
+
+.links_experiences:hover{
+  animation: colorFade 0.2s forwards;
 }
 
 .links_experiences:visited{
