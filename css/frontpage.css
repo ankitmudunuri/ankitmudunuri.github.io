@@ -15,7 +15,7 @@ body, html{
 }
 
 .background{
-  background-image: url("../files/images/background-test.jpg");
+  background-image: url("../files/images/background_main.jpg");
   height:100%;
   background-position: center;
   background-repeat: no-repeat;
