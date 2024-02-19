@@ -8,8 +8,18 @@
   src: url("../files/fonts/MaisonNeueMono-Regular.woff2") format('woff2');
 }
 
-.mainpage{
+body, html{
+  height:100%;
+  margin:0%;
   animation: fadeIn 1s;
+}
+
+.background{
+  background-image: url("../files/images/background-test.jpg");
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 @keyframes fadeIn {
