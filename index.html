@@ -7,17 +7,32 @@
   <script src="js/frontpage.js"></script>
 </head>
 <body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
-  <div class="topsection_mainpage">
-    <div class="secondary_elements">
-      <h2 class="main_header2">Ankit Mudunuri</h2>
-    </div>
+  <div class="topsection_mainpage" id="backgroundImage">
   </div> 
   <div class="websitelinks">
+    <a href="index.html" class="links_home" id="homeTag">Home</a>
+    <script>
+      document.getElementById('homeTag').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      var element = document.getElementsByClassName('topsection_mainpage')[0];
+      element.classList.add('blur-background');
+  
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("index.html");
+      }, 250);
+    });
+  </script>
     <a href="pages/about.html" class="links_about" id="aboutTag">About</a>
     <script>
         document.getElementById('aboutTag').addEventListener('click', function(e) {
         e.preventDefault();
     
+        var element = document.getElementsByClassName('topsection_mainpage')[0];
+        element.classList.add('blur-background');
+
         document.body.classList.add('move-out');
     
         setTimeout(function() {
@@ -25,15 +40,58 @@
         }, 500);
       });
     </script>
-    <a href="pages/projects.html" class="links_projects">Projects</a>
-    <a href="pages/experiences.html" class="links_experiences">Experiences</a>
+    <a href="pages/projects.html" class="links_projects" id="projectTag">Projects</a>
+    <script>
+      document.getElementById('projectTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      var element = document.getElementsByClassName('topsection_mainpage')[0];
+      element.classList.add('blur-background');
+
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("pages/projects.html");
+      }, 500);
+    });
+    </script>
+    <a href="pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
+    <script>
+      document.getElementById('experiencesTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      var element = document.getElementsByClassName('topsection_mainpage')[0];
+      element.classList.add('blur-background');
+
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("pages/experiences.html");
+      }, 500);
+    });
+    </script>
+    <a href="pages/contact.html" class="links_contact" id="contactTag">Contact</a>
+    <script>
+      document.getElementById('contactTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      var element = document.getElementsByClassName('topsection_mainpage')[0];
+      element.classList.add('blur-background');
+
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("pages/contact.html");
+      }, 500);
+    });
+    </script>
   </div> 
   <div class="secondary_elements">
     <h2 class="main_header1">Ankit Mudunuri</h2>
   </div>
   <div class="overview">
     <img src="files/images/profile.jpg" width="300" height="300" class="profile">
-    <p class="description">Hi, my name is Ankit Mudunuri! I am currently a sophomore studying Computer Science at Michigan State University. I have worked as an intern at Siemens Digital Industries and Electro-Matic Products, and will be working as an intern at Stellantis during the summer of 2024.</p>
+    <p class="description">Hi, my name is Ankit Mudunuri! I am currently a sophomore studying Computer Science at Michigan State University. As a student deeply fascinated by the convergence of artificial intelligence and cybersecurity, I am committed to exploring and innovating within these fields to create smarter, safer digital environments.</p>
   </div>
 </body>
 </html>

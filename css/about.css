@@ -23,15 +23,23 @@ body, html{
 }
 
 .mainpage{
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
 }
 
-.background{
+.topsection_mainpage{
   background-image: url("../files/images/background_main.jpg");
-  height:100%;
-  background-position: center;
+  filter:blur(6px);
+  position:absolute;
+  top:0px;
+  padding-top:10%;
+  align-self:center;
+  padding-left:15%;
+  left:7%;
+  height:45%;
+  width:70%;
+  background-position: 30%;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size:cover;
 }
 
 @keyframes fadeIn {
@@ -50,15 +58,25 @@ body, html{
   display:inline-block;
 }
 
-.main_header1 {
+.mainheader_text {
   font-family: 'MaisonNeueBook';
-  font-size: 50px;
-  top: -70px;
+  font-size: 70px;
+  top: 55%;
   position:absolute;
   color:white;
-  left:10px;
+  left:8%;
   visibility: visible;
-  animation: fadeMove 2.75s;
+  animation: fadeMove 3s;
+}
+
+.mainheader_breakline{
+  position:absolute;
+  top:70%;
+  width: 70%;
+  left:5%;
+  height:5px;
+  background-color:white;
+  border-radius:3px;
 }
 
 @keyframes fadeMove{
@@ -106,79 +124,6 @@ body, html{
 
 body.move-out{
   animation: clickLinkFade 0.5s forwards;
-}
-
-.main_header2 {
-  font-family: 'MaisonNeueBook';
-  font-size: 50px;
-  color:white;
-  left:10px;
-  visibility: hidden;
-}
-
-.topsection_mainpage{
-  background-image: url("../files/images/background_main.jpg");
-  position:absolute;
-  top:0px;
-  padding-top:10%;
-  align-self:center;
-  padding-left:15%;
-  left:7%;
-  height:45%;
-  width:70%;
-  background-position: 30%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-@keyframes backgroundBlur{
-  0%{
-    filter:blur(0px);
-  }
-
-  100%{
-    filter:blur(6px);
-  }
-}
-
-div.blur-background{
-  animation: backgroundBlur 0.5s forwards;
-}
-
-.secondary_elements{
-  animation: fadeIn 3s;
-  position:absolute;
-  width:95%;
-  left:5%;
-  top: 59%;
-}
-
-
-
-.profile{
-  position:absolute;
-  top:62%;
-  left:6.5%;
-  animation: fadeMoveProfile 4s;
-  border-radius: 5%;
-}
-
-.overview{
-  display:flex;
-  align-items:center;
-  justify-content: center;
-}
-
-.description{
-  font-family: "MaisonNeueRegular";
-  font-size: 28px;
-  color: white;
-  position: absolute;
-  word-wrap: break-word;
-  top: 63%;
-  padding-left:28%;
-  padding-right:10%;
-  animation: fadeMove 3.5s;
 }
 
 .websitelinks{
@@ -338,6 +283,33 @@ div.blur-background{
   padding: 20px;
 }
 
+@keyframes backgroundBlur{
+  0%{
+    filter:blur(6px);
+  }
+
+  100%{
+    filter:blur(0px);
+  }
+}
+
+div.blur-background{
+  animation: backgroundBlur 0.5s forwards;
+}
+
+div.abouttext{
+  top:70%;
+  padding-left:9%;
+  padding-right:9%;
+  word-wrap:break-word;
+  position:absolute;
+}
+
+p.aboutme{
+  font-family:'MaisonNeueRegular';
+  font-size: 18px;
+  color: white;
+}
 
 @media screen and (max-width: 1300px) {
   .main_header1{visibility: hidden;}

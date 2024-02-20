@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/frontpage.css">
-    </head>
-    <body>
-        <p>Projects</p>
-    </body>
+<head class="header">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
+  <div class="topsection_mainpage">
+  </div> 
+  <div class="websitelinks">
+    <a href="../index.html" class="links_home" id="homeTag">Home</a>
+    <script>
+      document.getElementById('homeTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("../index.html");
+      }, 250);
+    });
+  </script>
+    <a href="../pages/about.html" class="links_about" id="aboutTag">About</a>
+    <script>
+        document.getElementById('aboutTag').addEventListener('click', function(e) {
+        e.preventDefault();
+    
+        document.body.classList.add('move-out');
+    
+        setTimeout(function() {
+          window.location.replace("../pages/about.html");
+        }, 500);
+      });
+    </script>
+    <a href="../pages/projects.html" class="links_projects" id="projectTag">Projects</a>
+    <script>
+      document.getElementById('projectTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("../pages/projects.html");
+      }, 500);
+    });
+    </script>
+    <a href="../pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
+    <script>
+      document.getElementById('experiencesTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("../pages/experiences.html");
+      }, 500);
+    });
+    </script>
+    <a href="../pages/contact.html" class="links_contact" id="contactTag">Contact</a>
+    <script>
+      document.getElementById('contactTag').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      document.body.classList.add('move-out');
+  
+      setTimeout(function() {
+        window.location.replace("../pages/contact.html");
+      }, 500);
+    });
+    </script>
+  </div> 
+</body>
 </html>
