@@ -68,15 +68,30 @@
     visibility: visible;
     animation: fadeMove 3s;
   }
-  
-  .mainheader_breakline{
+
+  .projectdivider{
+    width:80%;
+    height:10px;
+    left:8%;
     position:absolute;
-    top:70%;
-    width: 70%;
-    left:5%;
-    height:5px;
     background-color:white;
-    border-radius:3px;
+    border-radius:5px;
+  }
+
+  .projecttitle {
+    font-family: 'MaisonNeueBook';
+    font-size: 40px;
+    position:absolute;
+    color:white;
+    left:8%;
+    visibility: visible;
+  }
+
+  p.projectdescription{
+    font-family:'MaisonNeueRegular';
+    font-size: 18px;
+    color: white;
+    position:absolute;
   }
   
   @keyframes fadeMove{
@@ -297,12 +312,10 @@
     animation: backgroundBlur 0.5s forwards;
   }
   
-  div.abouttext{
+  div.projects{
     top:70%;
     padding-left:9%;
     padding-right:9%;
-    word-wrap:break-word;
-    position:absolute;
   }
   
   p.aboutme{

@@ -309,6 +309,7 @@ p.aboutme{
   font-family:'MaisonNeueRegular';
   font-size: 18px;
   color: white;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 1300px) {
