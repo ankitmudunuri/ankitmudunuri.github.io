@@ -256,4 +256,8 @@ body.move-out {
     font-size: 20px;
     padding: 10px;
   }
+  
+  .page-title {
+    font-size: 50px;
+  }
 }
