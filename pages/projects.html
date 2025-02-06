@@ -91,9 +91,9 @@
           to interface with the app, and allows you to do 4 basic tasks: add login credentials to the manager and search for,
           update, and remove credentials based on the domain given. The main privacy gimmick of this app is that it also encrypts
           and decrypts the entire password bank and main login credentials using the Argon2 library in Rust, further securing all
-          of the stored data in the off-chance that the device is compromised. I am planning to add a feature that utilizes a trained 
-          Long Short-Term Memory Recurrent Neural Network (LSTM RNN, also dang that is a mouthful) model to estimate how strong the password 
-          given is on a scale from 0-4 (hence the "AI" part of the name). 
+          of the stored data in the off-chance that the device is compromised. It also utilizes a trained CNN (Convolutional Neural Network)
+          to estimate the strength of passwords to give you a better judgement on what passwords are more susceptible to cracks (I plan on changing
+          this to an LSTN RNN in the future to improve the accuracy of estimates). 
           
         </p>
         <p class="project-text">
