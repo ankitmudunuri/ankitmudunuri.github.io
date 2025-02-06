@@ -3,30 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Use your existing frontpage.css for global design -->
   <link rel="stylesheet" href="../css/about.css" />
-  <!-- Optionally link a small "projects.css" if you still want custom styling -->
   <link rel="stylesheet" href="../css/projects.css" />
-  <!-- If you use the same fade-out on link clicks -->
   <script src="../js/frontpage.js"></script>
 </head>
 <body onload="mobileCheck()">
 
-  <!-- Top hero section -->
   <div class="topsection_mainpage">
     <h1 class="page-title">Projects</h1>
   </div>
 
-  <!-- Divider -->
   <hr class="section-divider" />
 
-  <!-- Navigation -->
   <nav class="websitelinks">
-    <!-- HOME -->
     <a href="../index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
-        e.preventDefault(); // fade-out animation
+        e.preventDefault();
         document.body.classList.add('exit');
         setTimeout(function() {
           window.location.href = "../index.html";
@@ -34,7 +27,6 @@
       });
     </script>
 
-    <!-- ABOUT -->
     <a href="about.html" class="links_about" id="aboutTag">About</a>
     <script>
       document.getElementById('aboutTag').addEventListener('click', function(e) {
@@ -46,7 +38,6 @@
       });
     </script>
 
-    <!-- PROJECTS -->
     <a href="projects.html" class="links_projects" id="projectTag">Projects</a>
     <script>
       document.getElementById('projectTag').addEventListener('click', function(e) {
@@ -58,7 +49,6 @@
       });
     </script>
 
-    <!-- EXPERIENCES -->
     <a href="experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
     <script>
       document.getElementById('experiencesTag').addEventListener('click', function(e) {
@@ -70,7 +60,6 @@
       });
     </script>
 
-    <!-- CONTACT -->
     <a href="contact.html" class="links_contact" id="contactTag">Contact</a>
     <script>
       document.getElementById('contactTag').addEventListener('click', function(e) {
@@ -83,7 +72,6 @@
     </script>
   </nav>
 
-  <!-- Main Projects Section -->
   <div class="overview">
 
     <a href="https://github.com/ankitmudunuri/passcrackai" class="gitlinks" target="_blank">
@@ -153,14 +141,6 @@
 
     <hr class="project-divider" />
     
-    <!-- Add more projects here, each in its own .description block if you like -->
-    <!--
-    <div class="description">
-      <h2>Another Project</h2>
-      <hr class="section-divider" />
-      <p>Project details...</p>
-    </div>
-    -->
   </div>
 
 </body>

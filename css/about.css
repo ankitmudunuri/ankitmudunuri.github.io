@@ -1,6 +1,4 @@
-/* -----------------------------------------------
-   1. Fonts
------------------------------------------------ */
+
 @font-face {
   font-family: 'MaisonNeueBook';
   src: url("../files/fonts/MaisonNeue-Book.woff2") format('woff2');
@@ -14,9 +12,6 @@
   src: url("../files/fonts/MaisonNeueMono-Bold.woff2") format('woff2');
 }
 
-/* -----------------------------------------------
-   2. Basic Reset & Body
------------------------------------------------ */
 html, body {
   margin: 0;
   padding: 0;
@@ -30,18 +25,15 @@ html, body {
   animation: fadeIn 1s;
 }
 
-/* -----------------------------------------------
-   3. Hero (Swirl Background) 
------------------------------------------------ */
 .topsection_mainpage {
   position: relative;
   display: flex;
-  justify-content: center; /* Centers text horizontally */
-  align-items: center; /* Centers text vertically */
+  justify-content: center; 
+  align-items: center;
   text-align: center;
-  height: 40vh; /* Adjust height as needed */
-  background: none; /* Remove direct background */
-  overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+  height: 40vh;
+  background: none; 
+  overflow: hidden; 
 }
 .topsection_mainpage::before {
   content: "";
@@ -49,12 +41,11 @@ html, body {
   inset: 0;
   background: url("../files/images/background_main.jpg") center no-repeat;
   background-size: cover;
-  filter: blur(7px); /* Only this background is blurred */
-  z-index: 0; /* Ensures it's behind the text */
+  filter: blur(7px);
+  z-index: 0;
   animation: fadeOpacity 3s forwards;
 }
 
-/* Ensure "About" text is visible and not blurred */
 .page-title {
   position: relative;
   font-family: 'MaisonNeueBook';
@@ -62,13 +53,10 @@ html, body {
   color: white;
   text-align: center;
   margin: 0;
-  z-index: 1; /* Above the blurred background */
+  z-index: 1;
   animation: fadeMove 3s;
 }
 
-/* -----------------------------------------------
-   4. Nav Bar
------------------------------------------------ */
 .websitelinks {
   display: flex;
   justify-content: center;
@@ -89,14 +77,10 @@ html, body {
   animation: colorFadeOut 0.2s forwards;
 }
 
-/* Hover */
 .websitelinks a:hover {
   animation: colorFade 0.2s forwards;
 }
 
-/* -----------------------------------------------
-   5. About Content
------------------------------------------------ */
 .about-content {
   max-width: 900px;
   margin: 2rem auto;
@@ -109,7 +93,7 @@ html, body {
   border: 0;
   height: 2px;
   width: 80%;
-  background-color: rgba(255,255,255,0.1); /* or your accent color */
+  background-color: rgba(255,255,255,0.1);
   animation: fadeMove 2s;
 }
 
@@ -121,9 +105,6 @@ html, body {
   color: white;
 }
 
-/* -----------------------------------------------
-   6. Animations
------------------------------------------------ */
 @keyframes fadeIn {
   0%   { opacity: 0; }
   100% { opacity: 1; }
@@ -150,12 +131,10 @@ html, body {
   100% { opacity: 0; transform: translateY(10px); }
 }
 
-/* The "move-out" class triggers the fade-out on click */
 body.move-out {
   animation: clickLinkFade 0.5s forwards;
 }
 
-/* optional blur reverse if you want it: */
 @keyframes backgroundBlur {
   0%   { filter: blur(6px); }
   100% { filter: blur(0px); }
@@ -164,7 +143,6 @@ body.move-out {
   animation: backgroundBlur 0.5s forwards;
 }
 
-/* colorFade animations for the nav links on hover */
 @keyframes colorFade {
   0%   { background-color: black; }
   100% { background-color: rgb(87, 87, 87); }
@@ -183,9 +161,6 @@ body.move-out {
   }
 }
 
-/* -----------------------------------------------
-   7. Media Queries for Smaller Screens
------------------------------------------------ */
 @media screen and (max-width: 800px) {
   .page-title {
     font-size: 2.5rem;

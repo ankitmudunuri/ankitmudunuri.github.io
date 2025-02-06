@@ -3,27 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Link to the new about.css -->
   <link rel="stylesheet" href="../css/about.css" />
   <script src="js/frontpage.js"></script>
 </head>
 <body onload="mobileCheck()" class="mainpage">
 
-  <!-- Hero / top section with swirl background -->
   <div class="topsection_mainpage">
-    <!-- Big heading for About -->
     <h1 class="page-title">About</h1>
   </div>
 
   <hr class="section-divider" />
 
-  <!-- Navigation bar (similar to front page) -->
   <nav class="websitelinks">
     <a href="../index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
         e.preventDefault();
-        // optional blur
         var element = document.getElementsByClassName('topsection_mainpage')[0];
         element.classList.add('blur-background');
         document.body.classList.add('move-out');
@@ -78,7 +73,6 @@
     </script>
   </nav>
 
-  <!-- Main content area for your about text -->
   <div class="about-content">
     <p class="aboutme">
       Hi, my name is Ankit Mudunuri! As stated on the homepage, I am currently 

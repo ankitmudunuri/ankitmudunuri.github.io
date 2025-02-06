@@ -1,6 +1,4 @@
-/* ========================================================
-   1) FONT-FACE DEFINITIONS
-   ======================================================== */
+
    @font-face {
     font-family: 'MaisonNeueBook';
     src: url("../files/fonts/MaisonNeue-Book.woff2") format('woff2');
@@ -14,25 +12,20 @@
     src: url("../files/fonts/MaisonNeueMono-Bold.woff2") format('woff2');
   }
   
-  /* Use a nice global box-sizing reset */
   * {
     box-sizing: border-box;
   }
   
-  /* Basic reset */
   body, html {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family: 'MaisonNeueRegular', sans-serif; /* fallback to something else if needed */
+    font-family: 'MaisonNeueRegular', sans-serif; 
     background-color: black;
     color: white;
   }
   
-  /* ========================================================
-     2) GLOBAL KEYFRAMES (animations) 
-     We'll only *apply* them in certain classes or in the big-screen media query
-     ======================================================== */
+
   @keyframes fadeIn {
     0%   { opacity: 0; }
     100% { opacity: 1; }
@@ -80,7 +73,7 @@
     }
     100% {
       opacity: 0;
-      transform: translateY(30px); /* Moves everything downward */
+      transform: translateY(30px);
     }
   }
 
@@ -95,21 +88,18 @@
 
   
   
-  /* ========================================================
-     3) BASE LAYOUT / RESPONSIVE STRUCTURE
-     ======================================================== */
+
   
-  /* Top “hero” (background only shown if screen is large—see big-screen media query) */
+
   .topsection_mainpage {
-    /* By default, no big image if on smaller screens. We'll add it below in @media. */
     padding: 6rem 2rem;
     text-align: center;
   }
-  
-  /* Title & subtitle */
+
+
   .page-title {
     font-family: 'MaisonNeueBook';
-    font-size: 3rem; /* Or bigger */
+    font-size: 3rem; 
     margin-bottom: 1rem;
 
   }
@@ -124,20 +114,20 @@
     border: 0;
     height: 2px;
     width: 80%;
-    background-color: rgba(255,255,255,0.1); /* or your accent color */
+    background-color: rgba(255,255,255,0.1); 
     animation: fadeMove 2s;
   }
   
   
-  /* Navigation bar */
+
   .websitelinks {
     display: flex;
-    flex-wrap: wrap; /* allows wrapping if narrower screens */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     padding: 1rem;
-    background-color: #000; /* or use a translucent black if you want */
+    background-color: #000; 
   }
   
   .websitelinks a {
@@ -147,7 +137,7 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    animation: colorFadeOut 0.2s forwards; /* to mimic your old “hover” approach */
+    animation: colorFadeOut 0.2s forwards; 
     transition: background-color 0.2s;
     position: relative;
     text-decoration: none;
@@ -160,13 +150,13 @@
     content: "";
     position: absolute;
     height: 2px;
-    background-color: #00eeff; /* your accent color */
+    background-color: #00eeff; 
     left: 0;
     right: 0;
     bottom: -2px;
   }
   
-  /* Overview section containing profile + description */
+
   .overview {
     display: flex;
     justify-content: center;
@@ -177,7 +167,7 @@
     margin: 0 auto;
   }
   
-  /* Profile image */
+
   .profile {
     max-width: 300px;
     height: auto;
@@ -185,7 +175,7 @@
     flex-shrink: 0;
   }
   
-  /* Text block next to the image */
+
   .description {
     font-size: 1.125rem;
     max-width: 600px;
@@ -195,7 +185,7 @@
     margin-top: 0;
   }
   
-  /* For smaller screens, stack them */
+
   @media (max-width: 900px) {
     .overview {
       flex-direction: column;
@@ -210,48 +200,35 @@
     }
   }
   
-/* ========================================================
-   BIG-SCREEN MEDIA QUERY:
-   Show background + animations + slight blur
-   ======================================================== */
+
    @media (min-width: 1600px), (min-height: 900px) {
     .topsection_mainpage {
-      /* Position relative so we can have a pseudo-element behind the text */
       position: relative;
-      overflow: hidden; /* helps ensure the blurred background doesn't overflow */
+      overflow: hidden;
       
-      /* Fade in the entire section if you like */
       animation: fadeIn 2s;
     }
-  
-    /* 
-      Put the background image on a ::before pseudo-element 
-      and blur it. 
-    */
+
     .topsection_mainpage::before {
       content: "";
       position: absolute;
-      inset: 0; /* top:0; left:0; right:0; bottom:0 */
+      inset: 0;
       background: url("../files/images/background_main.jpg") center no-repeat;
       background-size: cover;
       background-color: rgba(0,0,0,0.9);
 
-      filter: blur(6px); /* << Adjust the blur to taste */
+      filter: blur(6px);
       z-index: 0;
-       /* behind the text */
       animation: fadeOpacity 3s forwards;
     }
   
-    /* Keep your text above the blurred background */
     .page-title,
     .page-subtitle {
       position: relative;
-      z-index: 1; /* above .topsection_mainpage::before */
-      /* Example animations */
+      z-index: 1;
       animation: fadeMove 2.75s;
     }
   
-    /* Same idea for the nav (if you want it above the blur) */
     .websitelinks {
       position: relative;
       z-index: 1;
@@ -261,12 +238,9 @@
     nav.websitelinks {
       background-color: rgba(0,0,0,0.6);
       padding: 1rem 2rem;
-      border-radius: 5px; /* Subtle rounding */
-      /* or box-shadow for a subtle lift */
+      border-radius: 5px;
     }
     
-  
-    /* The overview (profile + description) also above the blur */
     .profile {
       position: relative;
       z-index: 1;
@@ -284,7 +258,6 @@
       animation: fadeMove 3.5s;
     }
   
-    /* If you still want the link-click fade out: */
     body.move-out {
       animation: clickLinkFade 0.5s forwards;
     }

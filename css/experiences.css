@@ -1,6 +1,4 @@
-/* -----------------------------------------------
-   1. Fonts
------------------------------------------------ */
+
 @font-face {
   font-family: 'MaisonNeueBook';
   src: url("../files/fonts/MaisonNeue-Book.woff2") format('woff2');
@@ -14,9 +12,6 @@
   src: url("../files/fonts/MaisonNeueMono-Bold.woff2") format('woff2');
 }
 
-/* -----------------------------------------------
-   2. Basic Reset & Body
------------------------------------------------ */
 html, body {
   margin: 0;
   padding: 0;
@@ -30,9 +25,7 @@ html, body {
   animation: fadeIn 1s;
 }
 
-/* -----------------------------------------------
-   3. Hero (Swirl Background)
------------------------------------------------ */
+
 .topsection_mainpage {
   position: relative;
   display: flex;
@@ -55,7 +48,7 @@ html, body {
   animation: fadeOpacity 3s forwards;
 }
 
-/* Ensure "experiences" text is visible */
+
 .page-title {
   position: relative;
   font-family: 'MaisonNeueBook';
@@ -67,9 +60,7 @@ html, body {
   animation: fadeMove 3s;
 }
 
-/* -----------------------------------------------
-   4. Nav Bar
------------------------------------------------ */
+
 .websitelinks {
   display: flex;
   justify-content: center;
@@ -90,14 +81,12 @@ html, body {
   animation: colorFadeOut 0.2s forwards;
 }
 
-/* Hover Effect */
+
 .websitelinks a:hover {
   animation: colorFade 0.2s forwards;
 }
 
-/* -----------------------------------------------
-   5. experiences Layout
------------------------------------------------ */
+
 .experiences-container {
   max-width: 1000px;
   margin: 3rem auto;
@@ -110,7 +99,7 @@ html, body {
 }
 .experience-block {
   display: flex;
-  flex-wrap: wrap;    /* allows wrapping if needed */
+  flex-wrap: wrap;  
   gap: 2rem;
   margin-bottom: 3rem;
   align-items: flex-start;
@@ -118,7 +107,7 @@ html, body {
 
 .experience-text {
   flex: 1;
-  width: 100%; /* slightly less than 50% to account for gap */
+  width: 100%;
   min-width: 300px;
 }
 
@@ -142,13 +131,13 @@ html, body {
 
 }
 
-/* Right side: Media */
+
 .experience-media {
   width: 45%;
   height: 100%;
   border-radius: 5px;
-  object-fit: contain; /* This will maintain aspect ratio */
-  max-height: 400px; /* Adjust this value to your preferred size */
+  object-fit: contain; 
+  max-height: 400px;
 }
 
 
@@ -166,7 +155,7 @@ body.exit {
   border: 0;
   height: 2px;
 
-  background-color: rgba(255,255,255,0.1); /* or your accent color */
+  background-color: rgba(255,255,255,0.1); 
   animation: fadeMove 2s;
 }
 
@@ -177,15 +166,13 @@ body.exit {
   border: 0;
   height: 30px;
 
-  background-color: rgba(0,0,0,0.1); /* or your accent color */
+  background-color: rgba(0,0,0,0.1); 
   animation: fadeMove 2s;
 }
 
 
 
-/* -----------------------------------------------
-   6. Animations
------------------------------------------------ */
+
 @keyframes fadeIn {
   0%   { opacity: 0; }
   100% { opacity: 1; }
@@ -249,13 +236,11 @@ body.move-out {
   }
   100% {
     opacity: 0;
-    transform: translateY(30px); /* Moves everything downward */
+    transform: translateY(30px);
   }
 }
 
-/* -----------------------------------------------
-   7. Media Queries for Smaller Screens
------------------------------------------------ */
+
 @media screen and (max-width: 900px) {
   .experience-block {
     flex-direction: column;
