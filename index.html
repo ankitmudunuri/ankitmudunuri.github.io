@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <html>
-<head class="header">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/frontpage.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/frontpage.css" />
+
+  <!-- If you still want the JS that does click-fade transitions, include it here: -->
   <script src="js/frontpage.js"></script>
 </head>
-<body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
-  <div class="topsection_mainpage" id="backgroundImage">
-  </div> 
-  <div class="websitelinks">
+<body onload="mobileCheck()">
+
+  <!-- Hero section (will only show the fancy background if large screen) -->
+  <div class="topsection_mainpage">
+    <h1 class="page-title">Ankit Mudunuri</h1>
+    <p class="page-subtitle">Cybersecurity & Machine Learning Enthusiast</p>
+  </div>
+
+  <hr class="section-divider" />
+
+
+  <!-- Navigation links -->
+  <nav class="websitelinks">
     <a href="index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
-      e.preventDefault();
-
-      var element = document.getElementsByClassName('topsection_mainpage')[0];
-      element.classList.add('blur-background');
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("index.html");
-      }, 250);
-    });
-  </script>
+        e.preventDefault(); // prevent immediate navigation
+    
+        // 1) Trigger the downward fade-out
+        document.body.classList.add('exit');
+    
+        // 2) Wait for animation to finish before redirect
+        setTimeout(function() {
+          window.location.href = "index.html";
+        }, 500); // same as the animation duration
+      });
+    </script>
     <a href="pages/about.html" class="links_about" id="aboutTag">About</a>
     <script>
-        document.getElementById('aboutTag').addEventListener('click', function(e) {
-        e.preventDefault();
+      document.getElementById('aboutTag').addEventListener('click', function(e) {
+        e.preventDefault(); // prevent immediate navigation
     
-        var element = document.getElementsByClassName('topsection_mainpage')[0];
-        element.classList.add('blur-background');
-
-        document.body.classList.add('move-out');
+        // 1) Trigger the downward fade-out
+        document.body.classList.add('exit');
     
+        // 2) Wait for animation to finish before redirect
         setTimeout(function() {
-          window.location.replace("pages/about.html");
-        }, 500);
+          window.location.href = "pages/about.html";
+        }, 500); // same as the animation duration
       });
     </script>
     <a href="pages/projects.html" class="links_projects" id="projectTag">Projects</a>
     <script>
       document.getElementById('projectTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      var element = document.getElementsByClassName('topsection_mainpage')[0];
-      element.classList.add('blur-background');
-
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("pages/projects.html");
-      }, 500);
-    });
+        e.preventDefault(); // prevent immediate navigation
+    
+        // 1) Trigger the downward fade-out
+        document.body.classList.add('exit');
+    
+        // 2) Wait for animation to finish before redirect
+        setTimeout(function() {
+          window.location.href = "pages/projects.html";
+        }, 500); // same as the animation duration
+      });
     </script>
     <a href="pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
     <script>
       document.getElementById('experiencesTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      var element = document.getElementsByClassName('topsection_mainpage')[0];
-      element.classList.add('blur-background');
-
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("pages/experiences.html");
-      }, 500);
-    });
+        e.preventDefault(); // prevent immediate navigation
+    
+        // 1) Trigger the downward fade-out
+        document.body.classList.add('exit');
+    
+        // 2) Wait for animation to finish before redirect
+        setTimeout(function() {
+          window.location.href = "pages/experiences.html";
+        }, 500); // same as the animation duration
+      });
     </script>
     <a href="pages/contact.html" class="links_contact" id="contactTag">Contact</a>
     <script>
       document.getElementById('contactTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      var element = document.getElementsByClassName('topsection_mainpage')[0];
-      element.classList.add('blur-background');
-
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("pages/contact.html");
-      }, 500);
-    });
+        e.preventDefault(); // prevent immediate navigation
+    
+        // 1) Trigger the downward fade-out
+        document.body.classList.add('exit');
+    
+        // 2) Wait for animation to finish before redirect
+        setTimeout(function() {
+          window.location.href = "pages/contact.html";
+        }, 500); // same as the animation duration
+      });
     </script>
-  </div> 
-  <div class="secondary_elements">
-    <h2 class="main_header1">Ankit Mudunuri</h2>
-  </div>
+  </nav>
+
+  <!-- Main “overview” section -->
   <div class="overview">
-    <img src="files/images/profile.jpg" width="300" height="300" class="profile">
-    <p class="description">Hi, my name is Ankit Mudunuri! I am currently a sophomore studying Computer Science at Michigan State University. As a student deeply fascinated by the convergence of artificial intelligence and cybersecurity, I am committed to exploring and innovating within these fields to create smarter, safer digital environments.</p>
+    <img 
+      src="files/images/profile.jpg" 
+      alt="Profile photo" 
+      class="profile"
+    />
+    <div class="description">
+      <h2>Hi, my name is Ankit Mudunuri!</h2>
+      <p>
+        I am currently a junior studying Computer Science at Michigan State University. 
+        As a student deeply fascinated by the convergence of artificial intelligence/machine learning and cybersecurity, 
+        I am committed to exploring and innovating within these fields to create smarter, safer digital environments.
+      </p>
+    </div>
   </div>
+
 </body>
 </html>

@@ -1,91 +1,167 @@
 <!DOCTYPE html>
 <html>
-<head class="header">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/projects.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Use your existing frontpage.css for global design -->
+  <link rel="stylesheet" href="../css/about.css" />
+  <!-- Optionally link a small "projects.css" if you still want custom styling -->
+  <link rel="stylesheet" href="../css/projects.css" />
+  <!-- If you use the same fade-out on link clicks -->
+  <script src="../js/frontpage.js"></script>
 </head>
-<body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
+<body onload="mobileCheck()">
+
+  <!-- Top hero section -->
   <div class="topsection_mainpage">
-  </div> 
-  <div class="websitelinks">
+    <h1 class="page-title">Projects</h1>
+  </div>
+
+  <!-- Divider -->
+  <hr class="section-divider" />
+
+  <!-- Navigation -->
+  <nav class="websitelinks">
+    <!-- HOME -->
     <a href="../index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../index.html");
-      }, 250);
-    });
-  </script>
-    <a href="../pages/about.html" class="links_about" id="aboutTag">About</a>
-    <script>
-        document.getElementById('aboutTag').addEventListener('click', function(e) {
-        e.preventDefault();
-    
-        document.body.classList.add('move-out');
-    
+        e.preventDefault(); // fade-out animation
+        document.body.classList.add('exit');
         setTimeout(function() {
-          window.location.replace("../pages/about.html");
+          window.location.href = "../index.html";
         }, 500);
       });
     </script>
-    <a href="../pages/projects.html" class="links_projects" id="projectTag">Projects</a>
+
+    <!-- ABOUT -->
+    <a href="about.html" class="links_about" id="aboutTag">About</a>
+    <script>
+      document.getElementById('aboutTag').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "about.html";
+        }, 500);
+      });
+    </script>
+
+    <!-- PROJECTS -->
+    <a href="projects.html" class="links_projects" id="projectTag">Projects</a>
     <script>
       document.getElementById('projectTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/projects.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "projects.html";
+        }, 500);
+      });
     </script>
-    <a href="../pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
+
+    <!-- EXPERIENCES -->
+    <a href="experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
     <script>
       document.getElementById('experiencesTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/experiences.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "experiences.html";
+        }, 500);
+      });
     </script>
-    <a href="../pages/contact.html" class="links_contact" id="contactTag">Contact</a>
+
+    <!-- CONTACT -->
+    <a href="contact.html" class="links_contact" id="contactTag">Contact</a>
     <script>
       document.getElementById('contactTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/contact.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "contact.html";
+        }, 500);
+      });
     </script>
-  </div>
-  <div class="mainheader">
-    <h1 class="mainheader_text">Projects</h1>
-  </div>
-  <div class="projects" style="padding-bottom: 5%;">
-    <div class="projectbox" style="padding-bottom: 5%;">
-      <hr class="projectdivider" style="top:69%; animation: fadeMove 3.5s;">
-      <h2 class="projecttitle" style="top: 71%; animation: fadeMove 4.5s;">LinkedIn Job Scraper</h2>
-      <p class="projectdescription" style="top: 78%; left:8%; animation: fadeMove 5.5s; padding-right:8%;">This was a project that I challenged myself with to practice how to code quick. I gave myself an alloted time of an hour and a half
-                                    to plan out the mini-project and actually create it. It also gave me practice of reading documentation, as I can proudly say I finished
-                                    this project just by testing it myself and utilizing the Selenium and Google Sheets API without the need of an online guide or tutorial.
-      </p>
-      <p class="projectdescription" style="top: 91.5%; left:8%; animation: fadeMove 6s; padding-right:8%; padding-bottom: 5%;">The project itself serves as a way to aggregate all jobs based on a certain job keyword search on LinkedIn.com. It allows a streamlined
-                                    way to aggregate potential jobs to apply to. There are still some kinks that I need to sort out, such as making a proper UI and making it
-                                    so that anyone can use it with their own Google account token. 
-      </p>
+  </nav>
+
+  <!-- Main Projects Section -->
+  <div class="overview">
+
+    <a href="https://github.com/ankitmudunuri/passcrackai" class="gitlinks" target="_blank">
+      <h2>PassCrackAI - A CLI-based Password Manager</h2>
+    </a>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="project-text">
+        <img src="../files/images/projects/passcrackaiterminal.png" alt="PassCrackAI Demo" class="project-media"/>
+        <p class="project-text">
+          This app is a personal project that was my gateway into learning Rust. I had seen a lot of internet buzz
+          about Rust being the "language of the future" and such, so I decided to create a project in order to learn 
+          as I developed the app.
+        </p>
+        <p class="project-text">
+          The app is essentially a local-hosted password manager for Windows (as of now). It uses the command shell 
+          to interface with the app, and allows you to do 4 basic tasks: add login credentials to the manager and search for,
+          update, and remove credentials based on the domain given. The main privacy gimmick of this app is that it also encrypts
+          and decrypts the entire password bank and main login credentials using the Argon2 library in Rust, further securing all
+          of the stored data in the off-chance that the device is compromised. I am planning to add a feature that utilizes a trained 
+          Long Short-Term Memory Recurrent Neural Network (LSTM RNN, also dang that is a mouthful) model to estimate how strong the password 
+          given is on a scale from 0-4 (hence the "AI" part of the name). 
+          
+        </p>
+        <p class="project-text">
+          My reasoning to make it locally
+          hosted is because I feel as though it is more private and secure, as it eliminates any external factors such
+          as cloud services and the idea of storing passwords in another company's servers/storage. I also decided to go
+          with the Command Line Interface (CLI) as the user interface, as opposed to a graphical interface, because I 
+          felt like it truly encapsulated the idea that you are in complete control of your own data, where nothing is abstracted
+          by a colorful or complicated GUI button (and also because I didn't want to have to learn a whole new app development
+          framework hahaha). But overall this project was fun to start, and I will keep working on it until I can finish all the features I promised!
+        </p>
+        <a href="https://github.com/ankitmudunuri/passcrackai" class="gitlinks" target="_blank">
+          <p>Click on me to go to the GitHub page for this project!</p>
+        </a>
+      </div>
     </div>
+    <hr class="text-divider" />
+
+    <hr class="project-divider" />
+
+    <a href="https://github.com/ankitmudunuri/linkedinscraper" class="gitlinks" target="_blank">
+      <h2>LinkedIn Job Scraper</h2>
+      </a>
+      <hr class="text-divider" />
+    <div class="description">
+      <div class="project-text">
+        <img src="../files/images/projects/linkedinscraperresults.png" alt="LinkedIn Scraper Project" class="project-media"/>
+        <p class="project-text">
+          This was a project that I challenged myself with to practice quick coding.
+          I gave myself 1.5 hours to plan and create it, which helped me practice reading
+          documentation for Selenium and the Google Sheets API without relying on external 
+          tutorials.
+        </p>
+        <p class="project-text">
+          The script aggregates jobs on LinkedIn (based on a search keyword) into a 
+          spreadsheet for streamlined application tracking. Next steps include creating 
+          a user-friendly UI and handling Google account tokens for any user.
+        </p>
+        <a href="https://github.com/ankitmudunuri/linkedinscraper" class="gitlinks" target="_blank">
+          <p>Click on me to go to the GitHub page for this project!</p>
+        </a>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+    <hr class="project-divider" />
+    
+    <!-- Add more projects here, each in its own .description block if you like -->
+    <!--
+    <div class="description">
+      <h2>Another Project</h2>
+      <hr class="section-divider" />
+      <p>Project details...</p>
+    </div>
+    -->
   </div>
+
 </body>
 </html>

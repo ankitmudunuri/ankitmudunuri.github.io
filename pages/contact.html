@@ -1,74 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head class="header">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/contact.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Use your existing frontpage.css for global design -->
+  <link rel="stylesheet" href="../css/about.css" />
+  <!-- Optionally link a small "experiences.css" if you still want custom styling -->
+  <link rel="stylesheet" href="../css/contact.css" />
+  <!-- If you use the same fade-out on link clicks -->
+  <script src="../js/frontpage.js"></script>
 </head>
-<body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
+<body onload="mobileCheck()">
+
+  <!-- Top hero section -->
   <div class="topsection_mainpage">
-  </div> 
-  <div class="websitelinks">
+    <h1 class="page-title">Contact</h1>
+  </div>
+
+  <!-- Divider -->
+  <hr class="section-divider" />
+
+  <!-- Navigation -->
+  <nav class="websitelinks">
+    <!-- HOME -->
     <a href="../index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../index.html");
-      }, 250);
-    });
-  </script>
-    <a href="../pages/about.html" class="links_about" id="aboutTag">About</a>
-    <script>
-        document.getElementById('aboutTag').addEventListener('click', function(e) {
-        e.preventDefault();
-    
-        document.body.classList.add('move-out');
-    
+        e.preventDefault(); // fade-out animation
+        document.body.classList.add('exit');
         setTimeout(function() {
-          window.location.replace("../pages/about.html");
+          window.location.href = "../index.html";
         }, 500);
       });
     </script>
-    <a href="../pages/projects.html" class="links_projects" id="projectTag">Projects</a>
+
+    <!-- ABOUT -->
+    <a href="about.html" class="links_about" id="aboutTag">About</a>
+    <script>
+      document.getElementById('aboutTag').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "about.html";
+        }, 500);
+      });
+    </script>
+
+    <!-- experienceS -->
+    <a href="projects.html" class="links_experiences" id="projectTag">Projects</a>
     <script>
       document.getElementById('projectTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/projects.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "projects.html";
+        }, 500);
+      });
     </script>
-    <a href="../pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
+
+    <!-- EXPERIENCES -->
+    <a href="experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
     <script>
       document.getElementById('experiencesTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/experiences.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "experiences.html";
+        }, 500);
+      });
     </script>
-    <a href="../pages/contact.html" class="links_contact" id="contactTag">Contact</a>
+
+    <!-- CONTACT -->
+    <a href="contact.html" class="links_contact" id="contactTag">Contact</a>
     <script>
       document.getElementById('contactTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/contact.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "contact.html";
+        }, 500);
+      });
     </script>
-  </div> 
+  </nav>
+
+  <!-- Main experiences Section -->
+  <div class="overview">
+
+    <h2>Here's how you can contact me!</h2>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="experience-text">
+        <div class="horizontal-container">
+          <a href="https://github.com/ankitmudunuri" class="gitlinks" target="_blank">
+            <h2 class="project-text">Github</h2>
+          </a>
+          <a href="https://www.linkedin.com/in/ankitmudunuri/" class="gitlinks" target="_blank">
+            <h2 class="project-text">LinkedIn</h2>
+          </a>
+        </div>
+
+          <form class="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit" onclick="sendMail()">Send</button>
+          </form>
+
+          <script>
+            function sendMail() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+            
+                var mailtoLink = `mailto:ankit.mudunuri@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A Message:${message}`;
+                
+                window.location.href = mailtoLink;
+            }
+          </script>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+   
+  </div>
+
 </body>
 </html>

@@ -1,111 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head class="header">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/about.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link to the new about.css -->
+  <link rel="stylesheet" href="../css/about.css" />
   <script src="js/frontpage.js"></script>
 </head>
-<body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
+<body onload="mobileCheck()" class="mainpage">
+
+  <!-- Hero / top section with swirl background -->
   <div class="topsection_mainpage">
-  </div> 
-  <div class="websitelinks">
+    <!-- Big heading for About -->
+    <h1 class="page-title">About</h1>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Navigation bar (similar to front page) -->
+  <nav class="websitelinks">
     <a href="../index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
-      e.preventDefault();
+        e.preventDefault();
+        // optional blur
+        var element = document.getElementsByClassName('topsection_mainpage')[0];
+        element.classList.add('blur-background');
+        document.body.classList.add('move-out');
+        setTimeout(function() {
+          window.location.replace("../index.html");
+        }, 250);
+      });
+    </script>
 
-      var element = document.getElementsByClassName('topsection_mainpage')[0];
-      element.classList.add('blur-background');
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../index.html");
-      }, 250);
-    });
-  </script>
     <a href="../pages/about.html" class="links_about" id="aboutTag">About</a>
     <script>
-        document.getElementById('aboutTag').addEventListener('click', function(e) {
+      document.getElementById('aboutTag').addEventListener('click', function(e) {
         e.preventDefault();
-    
         document.body.classList.add('move-out');
-    
         setTimeout(function() {
           window.location.replace("../pages/about.html");
         }, 500);
       });
     </script>
+
     <a href="../pages/projects.html" class="links_projects" id="projectTag">Projects</a>
     <script>
       document.getElementById('projectTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/projects.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('move-out');
+        setTimeout(function() {
+          window.location.replace("../pages/projects.html");
+        }, 500);
+      });
     </script>
+
     <a href="../pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
     <script>
       document.getElementById('experiencesTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/experiences.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('move-out');
+        setTimeout(function() {
+          window.location.replace("../pages/experiences.html");
+        }, 500);
+      });
     </script>
+
     <a href="../pages/contact.html" class="links_contact" id="contactTag">Contact</a>
     <script>
       document.getElementById('contactTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/contact.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('move-out');
+        setTimeout(function() {
+          window.location.replace("../pages/contact.html");
+        }, 500);
+      });
     </script>
-  </div>
-  <div id="mainheader">
-    <h1 class="mainheader_text">About</h1>
-  </div>
-  <div id="abouttext" style="animation: fadeMove 4.5s;" class="abouttext">
-    <p class="aboutme">Hi, my name is Ankit Mudunuri! As stated on the homepage, I am currently a sophomore majoring in Computer Science at Michigan State University. 
-        The fields of computer science that I am most interested in are artificial intelligence and cybersecurity, more specifically the fields of cognitive
-        AI and object perception, as well as low-level systems and networking-related topics in the cybersecurity space (though I am just starting to branch out into this field). 
+  </nav>
+
+  <!-- Main content area for your about text -->
+  <div class="about-content">
+    <p class="aboutme">
+      Hi, my name is Ankit Mudunuri! As stated on the homepage, I am currently 
+      a junior majoring in Computer Science at Michigan State University. 
+      The fields of computer science that I am most interested in are cybersecurity
+      and artificial intelligence/machine learning, more specifically low-level systems 
+      and networking-related topics in the cybersecurity space, as well the fields of cognitive AI 
+      and object perception. My main focus is to bridge the gap between cybersecurity and AI/ML
+      by finding ways to utilize machine learning in helping to secure systems and prevent threats,
+      as well as securing machine learning models and preventing bad actors from causing harm, such
+      as inserting malicious data into training data or causing purposeful hallucinations.
     </p>
 
-    <p class="aboutme" style="padding-top: 2%;">To start, I grew up in a setting that truly fostered my love for engineering, ranging from the contraptions I built with
-                                         Legos all the way to the times that I interrupted my dad's work meetings to show him that I ripped apart the electronics 
-                                         of my RC car. The media I was exposed to around this time also definitely played a vital role in this, as I used to watch movies like 
-                                         Tron: Legacy and Bladerunner or watch playthroughs on YouTube of games like Deus Ex. This love then led me to joining a robotics team, 
-                                         more specifically in the FIRST Robotics Circuit, which helped me learn about the engineering process and how a product can go from a design 
-                                         on a piece of paper all the way to a complex functioning mechanism.
+    <p class="aboutme">
+      To start, I grew up in a setting that truly fostered my love for engineering, ranging 
+      from the contraptions I built with Legos all the way to the times that I interrupted my 
+      dad's work meetings to show him that I ripped apart the electronics of my RC car. The 
+      sci-fi media I was exposed to around this time also definitely played a vital role in this, as 
+      I used to watch movies like Tron: Legacy and Bladerunner or watch playthroughs on YouTube 
+      of games like Deus Ex (yes, I know it might sound corny or nerdy as an inspiration but I still love it). This love 
+      then led me to joining a robotics team, more specifically in the FIRST Robotics Circuit, which 
+      helped me learn about the engineering process and how a product can go from a design on a piece 
+      of paper all the way to a complex functioning mechanism. This program also helped me understand 
+      the basic scientific concepts needed for engineering, such as physics and chemistry, which originally 
+      did push me more towards becoming a mechanical engineer.
     </p>
-    <p class="aboutme" style="padding-top: 2%;">Later on I was introduced to the world of computer science through an after-school club in high school. I had previously coded used Java
-                                        in middle school robotics, though I hated it, but this club helped introduce me to the concept of "actually enjoying coding". I started by
-                                        learning HTML and CSS, and later started learning about basic algorithms and how to code in C++. This love for computer science then culminated
-                                        into an introduction to the workforce through my first internship, where I taught myself Python using online tutorials in order to be ready for 
-                                        the internship. This introduction to Python helped introduce me to the world of AI as well, as the internship allowed me to experiment with some
-                                        of the libraries, such as TensorFlow and Keras. Later on I also started experimenting with systems and networking libraries, which promoted my love
-                                        for cybersecurity-related topics. Overall, when I look back at it all I can never see myself in my previously imagined role of a mechanical engineer.     
+
+    <p class="aboutme">
+      Later on, though, I was introduced to the world of computer science through an after-school club in high school. 
+      I had previously coded used Java in middle school robotics, though I hated it, but this club helped 
+      introduce me to the concept of "actually enjoying coding". I started by learning HTML and CSS, and later 
+      started learning about basic algorithms and how to code in C++. This love for computer science then 
+      culminated into an introduction to the workforce through my first internship, where I taught myself Python 
+      using online tutorials in order to be ready for the internship. This introduction to Python helped introduce 
+      me to the world of AI/ML as well, as the internship allowed me to experiment with some related libraries, such as 
+      TensorFlow and Keras. Later on I also started experimenting with systems and networking libraries, which promoted 
+      my love for cybersecurity-related topics. Overall, when I look back at it all I could never see myself in my previously 
+      imagined role of a mechanical engineer.
     </p>
-    <p class="aboutme" style="padding-top: 2%;">So, enough about my love for computer science. Alongside all of this, I like to work out and play basketball in my free time. I also like to produce music,
-        giving me another artistic medium to express my creativity through. I also was part of a high school marching band as a drumline member, and still try to practice my skills whenever I get
-        a chance. All of these activities help me relax and hone other skills, rather than sitting at my desktop all day hammering away at the keyboard. They also help me keep in physical and mental shape as well,
-        helping train my discipline and focus as a side effect.
+
+    <p class="aboutme">
+      So, enough about my love for computer science. Alongside all of this, I like to work out and play basketball in my free 
+      time. I also like to produce music, giving me another artistic medium to express my creativity through. I also was part 
+      of a high school marching band as a drumline member, and still try to practice my skills whenever I get a chance. All of 
+      these activities help me relax and hone other skills, rather than sitting at my desktop all day hammering away at the 
+      keyboard. They also help me keep in physical and mental shape as well, and help train my discipline and focus as a side effect.
     </p>
-    <p class="aboutme" style="padding-top: 2%; padding-bottom:5%;">So this is all about me. I still strive to be the best computer scientist that I can every single day, and I am always pursuing new knowledge in my fields of interest. 
-                                                I am also always open to meet and work with new people, so please do contact me if you want to work on anything or just simply want to chat. Thank you for reading this!
+
+    <p class="aboutme" style="padding-bottom: 4rem;">
+      So this is all about me. I still strive to be the best engineer that I can every single day, and I am always pursuing 
+      new knowledge in my fields of interest. I am also always open to meet and work with new people, so please do contact me if you 
+      want to work on anything or just simply want to chat. Thank you for reading this!
     </p>
   </div>
+
 </body>
 </html>

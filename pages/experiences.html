@@ -1,74 +1,192 @@
 <!DOCTYPE html>
 <html>
-<head class="header">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/experiences.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Use your existing frontpage.css for global design -->
+  <link rel="stylesheet" href="../css/about.css" />
+  <!-- Optionally link a small "experiences.css" if you still want custom styling -->
+  <link rel="stylesheet" href="../css/experiences.css" />
+  <!-- If you use the same fade-out on link clicks -->
+  <script src="../js/frontpage.js"></script>
 </head>
-<body style="background-color:black;" class="mainpage" id="mainpage" onload="mobileCheck()">
+<body onload="mobileCheck()">
+
+  <!-- Top hero section -->
   <div class="topsection_mainpage">
-  </div> 
-  <div class="websitelinks">
+    <h1 class="page-title">Experiences</h1>
+  </div>
+
+  <!-- Divider -->
+  <hr class="section-divider" />
+
+  <!-- Navigation -->
+  <nav class="websitelinks">
+    <!-- HOME -->
     <a href="../index.html" class="links_home" id="homeTag">Home</a>
     <script>
       document.getElementById('homeTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../index.html");
-      }, 250);
-    });
-  </script>
-    <a href="../pages/about.html" class="links_about" id="aboutTag">About</a>
-    <script>
-        document.getElementById('aboutTag').addEventListener('click', function(e) {
-        e.preventDefault();
-    
-        document.body.classList.add('move-out');
-    
+        e.preventDefault(); // fade-out animation
+        document.body.classList.add('exit');
         setTimeout(function() {
-          window.location.replace("../pages/about.html");
+          window.location.href = "../index.html";
         }, 500);
       });
     </script>
-    <a href="../pages/projects.html" class="links_projects" id="projectTag">Projects</a>
+
+    <!-- ABOUT -->
+    <a href="about.html" class="links_about" id="aboutTag">About</a>
+    <script>
+      document.getElementById('aboutTag').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "about.html";
+        }, 500);
+      });
+    </script>
+
+    <!-- experienceS -->
+    <a href="projects.html" class="links_experiences" id="projectTag">Projects</a>
     <script>
       document.getElementById('projectTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/projects.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "projects.html";
+        }, 500);
+      });
     </script>
-    <a href="../pages/experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
+
+    <!-- EXPERIENCES -->
+    <a href="experiences.html" class="links_experiences" id="experiencesTag">Experiences</a>
     <script>
       document.getElementById('experiencesTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/experiences.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "experiences.html";
+        }, 500);
+      });
     </script>
-    <a href="../pages/contact.html" class="links_contact" id="contactTag">Contact</a>
+
+    <!-- CONTACT -->
+    <a href="contact.html" class="links_contact" id="contactTag">Contact</a>
     <script>
       document.getElementById('contactTag').addEventListener('click', function(e) {
-      e.preventDefault();
-  
-      document.body.classList.add('move-out');
-  
-      setTimeout(function() {
-        window.location.replace("../pages/contact.html");
-      }, 500);
-    });
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "contact.html";
+        }, 500);
+      });
     </script>
-  </div> 
+  </nav>
+
+  <!-- Main experiences Section -->
+  <div class="overview">
+
+    <h2>Stellantis - Software Intern (May 2024 - August 2024)</h2>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="experience-text">
+        <p class="experience-text">
+          Languages/Skills: Python, PySpark, Bash, SSH, Voxel51, Kanban, Linux OS
+        </p>
+        <p class="experience-text">
+          This was my most recent full-time summer internship. I worked at the Stellantis North American headquarters located 
+          in Auburn Hills, MI. Some of the things I got to work on included:
+          <ul>
+            <li>Plugins in the Voxel51 FiftyOne API for Python, which involved having to create a way for the API to read in 3D LiDAR sensor
+                data, that was collected during data collection driving sessions for L3 ADAS (Level 3 Advanced Driver Assistance Systems), and 
+                visualize it. This allows for efficient data filtration when training efficient machine learning models for ADAS.
+            </li>
+            <li>A pipeline of custom Python and Bash scripts in Linux that allowed our team to extract metadata from data collection sessions and 
+                check if the sensors had the proper data collection rates (if they were actually reading in data). I also had to utilize SSH and PySpark
+                in order to connect to the servers housing the data so that I could extract the metadata and push it onto the AWS S3 buckets that hosted
+                more data. 
+            </li>
+          </ul>
+
+          Overall, this internship was a lot of fun and taught me a lot about data pipelines, as well as CI/CD pipelines
+          for software services, and how to interface with vehicle sensor data and the such. It also helped me understand
+          how to go about preprocessing and filtering data in order to train the most efficient machine learning models possible.
+        </p>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+    <hr class="experience-divider" />
+
+    <h2>Siemens Digital Industries - Software Intern (June 2021 - August 2021, June 2023 - August 2023)</h2>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="experience-text">
+        <p class="experience-text">
+          Languages/Skills: Python, C++, TensorFlow, OpenCV, PyTorch, PyQT, PySNMP, Bash
+        </p>
+        <p class="experience-text">
+          This was my first internship, the one that really got me interested in computer science. The first time I helped work on:
+          <ul>
+            <li>A computer vision-assited anomaly detection script in Python for an assembly line. This script essentially
+                took pictures of parts on an assembly line and could identify defects in the part in order to diagnose if 
+                the part was faulty or not, and divert it before it got to the vehicle assembly stage. 
+            </li>
+          </ul>
+          The second time around, during my third internship, I got to work on the following projects:
+          <ul>
+            <li>Preprocessing assembly line image and infrared data of objects and researching the best method of training neural network
+                models in order to generate 3D point cloud models of the data, which also required me to implement depth estimation
+                while training the model. 
+            </li>
+            <li>A script in Python for SNMP (Simple Network Management Protocol) communcation between Siemens equipment. This allowed
+                for seamless and easy CLI management of all Siemens equipment that are connected together on a production network.
+            </li>
+          </ul>
+          This internship will always hold a special place in my heart, as it was the first internship that I had gotten and essentially
+          nudged me into going towards the field of computer science.
+        </p>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+    <hr class="experience-divider" />
+    
+    <h2>Electro-Matic Products, Inc. - Software Intern (July 2022 - August 2022, October 2022 - Current)</h2>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="experience-text">
+        <p class="experience-text">
+          Languages/Skills: Python, C++, C, PHP, JavaScript, HTML/CSS, VBA, SQL (MySQL), RegEx
+        </p>
+        <p class="experience-text">
+          This was my second internship, and is also my current part-time internship. I had worked on:
+          <ul>
+            <li>A way to communicate between Siemens HMIs and Rockwell PLCs via RS Logix 5000 and the Siemens TIA Portal, as well as Bash scripts.
+                This would negate the need for completely having to replace all Rockwell systems during migration towards Siemens systems in assembly plants.
+            </li>
+            <li>A Python GUI application that converted VBA (Visual Basic Advanced) classes to PHP classes. This utilized RegEx (Regular Expressions) pattern
+              matching, and was made in order to mitigate the time needed to manually convert every single class to PHP
+
+            </li>
+            <li>
+                A login/user page using PHP classes that allowed you to add, remove, and edit user permissions for changing the text on an LED sign. The sign is
+                connected to a Raspberry Pi that hosts this page via Nginx.
+            </li>
+            <li>
+                Installing and configuring Avast Business Antivirus onto Siemens CRWs, as well as locking down the OS and creating technical documentation on how to do this.
+            </li>
+          </ul>
+          This internship introduced me to a plethora of things in the software world. It gave me the opportunity to learn about the hardware side of things, like how computers
+          interface with physical sensors, as well as teaching me how to write technical documentation for engineering. It also introduced me to the security side of things, thus
+          starting my interest in cybersecurity.
+        </p>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+    <hr class="experience-divider" />
+  </div>
+
 </body>
 </html>
