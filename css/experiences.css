@@ -22,7 +22,7 @@ html, body {
 }
 
 .mainpage {
-  animation: fadeIn 1s;
+  animation: fadeIn 0.5s;
 }
 
 
@@ -57,7 +57,7 @@ html, body {
   text-align: center;
   margin: 0;
   z-index: 1;
-  animation: fadeMove 3s;
+  animation: fadeMove 2s;
 }
 
 
@@ -67,7 +67,7 @@ html, body {
   flex-wrap: wrap;
   gap: 2rem;
   padding: 1rem;
-  animation: fadeMoveLinks 3s;
+  animation: fadeMoveLinks 2s;
 }
 
 .websitelinks a {
@@ -91,11 +91,11 @@ html, body {
   max-width: 1000px;
   margin: 3rem auto;
   padding: 0 1rem;
-  animation: fadeMove 4.5s;
+  animation: fadeMove 3s;
 }
 
 .overview {
-  animation: fadeMove 5.5s;
+  animation: fadeMove 3s;
 }
 .experience-block {
   display: flex;
