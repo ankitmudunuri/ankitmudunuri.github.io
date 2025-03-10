@@ -114,6 +114,44 @@
 
     <hr class="project-divider" />
 
+    <a href="https://github.com/ankitmudunuri/communicate.ai" class="gitlinks" target="_blank">
+      <h2>Communicate.AI - A Live Video Translation App</h2>
+    </a>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="project-text">
+        <img src="../files/images/projects/communicateaidemo.png" alt="Communicate.AI Demo" class="project-media"/>
+        <p class="project-text">
+          This app is a project that me and three other team members undertook for the University of Michigan MHacks 16 Hackathon in the Fall semester
+          of 2023. This was built in Python 
+        </p>
+        <p class="project-text">
+          The basic gist of this app is that it creates subtitles for video feeds of people talking and tracks those subtitles to the person's face. It does this via the use of
+          OpenCV in Python to track the person's face with a bounding box, as well as place the subtitles underneath, and it also used to utilize the Google Cloud API for Google Speech-To-Text
+          and Google Translate (now it doesn't anymore, it just uses Python packages to do all of it locally). This app was also multithreaded to speed up conversion for live-time translation, 
+          so we had one thread processing the video feed to get the bounding box of the person's face, one thread for audio capture, one thread for speech-to-text, another thread for text translation, 
+          and a final thread to create an overlay mesh with the converted text on top of the video stream.
+          
+        </p>
+        <p class="project-text">
+          Some challenges that we ran into during the 24 hours of the hackathon was figuring out how to get the Google Cloud API working with authentication and using the credits that were given to us
+          for the hackathon. Once we finally figured out how to get that all running we ran into another problem of how we were going to communicate data between the threads in the pipeline. Our solution
+          to this was using thread-safe queues between each thread in the pipeline, as that was the only way we could think of doing this at the time. The final problem that we ran into was bottlenecking
+          at certain points in the pipeline. For example, the subsequent requests and responses from the Google Cloud API took a long time due to travel time and distance of each request and response, as well
+          as the bad Wi-Fi in the building we were in. Unfortunately we did not get to fix this, partially because we also were trying to make our project qualify for the "Best use of Google Cloud" award, but
+          we later removed the use of Google Cloud and replaced it with Python libraries that do all of the data conversion locally. This mitigated the delay and bottlenecking of the program quite a bit, finally
+          making it run how we intended it to (mostly). Overall this was a truly fun experience, and helped all of us in the team learn how to work together and keep sane while under pressure to finish a project 
+          in a constrained amount of time.
+        </p>
+        <a href="https://github.com/ankitmudunuri/communicate.ai" class="gitlinks" target="_blank">
+          <p>Click on me to go to the GitHub page for this project!</p>
+        </a>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+    <hr class="project-divider" />
+
     <a href="https://github.com/ankitmudunuri/linkedinscraper" class="gitlinks" target="_blank">
       <h2>LinkedIn Job Scraper</h2>
       </a>
