@@ -87,7 +87,9 @@
   }
 
   
-  
+  .mainpage {
+    animation: fadeIn 0.5s;
+  }
 
   
 
