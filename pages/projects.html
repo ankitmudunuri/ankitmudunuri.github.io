@@ -70,6 +70,17 @@
         }, 500);
       });
     </script>
+
+    <a href="resume.html" class="links_resume" id="resumeTag">Resume</a>
+    <script>
+      document.getElementById('resumeTag').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('exit');
+        setTimeout(function() {
+          window.location.href = "resume.html";
+        }, 500);
+      });
+    </script>
   </nav>
 
   <div class="overview">

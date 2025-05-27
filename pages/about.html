@@ -71,12 +71,23 @@
         }, 500);
       });
     </script>
+
+    <a href="../pages/resume.html" class="links_resume" id="resumeTag">Resume</a>
+    <script>
+      document.getElementById('resumeTag').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('move-out');
+        setTimeout(function() {
+          window.location.replace("../pages/resume.html");
+        }, 500);
+      });
+    </script>
   </nav>
 
   <div class="about-content">
     <p class="aboutme">
       Hi, my name is Ankit Mudunuri! As stated on the homepage, I am currently 
-      a junior majoring in Computer Science at Michigan State University. 
+      a senior majoring in Computer Science at Michigan State University. 
       The fields of computer science that I am most interested in are cybersecurity
       and artificial intelligence/machine learning, more specifically low-level systems 
       and networking-related topics in the cybersecurity space, as well the fields of cognitive AI 
