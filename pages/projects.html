@@ -83,8 +83,40 @@
     </script>
   </nav>
 
+  
+
   <div class="overview">
 
+
+    <a href="https://github.com/ankitmudunuri/dbscan-nids" class="gitlinks" target="_blank">
+      <h2>DBSCAN-based Network Intrusion Detection System</h2>
+    </a>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="project-text">
+        <img src="../files/images/projects/dbscan-nids-cluster.png" alt="DBSCAN NIDS Demo" class="project-media"/>
+        <p class="project-text">
+          This script suite was a project that I did to further practice network security fundamentals, as well as get
+          some practice with things like Snort parsing and rules, as well as capturing network traffic and categorizing it
+          based on its characteristics. It also helped me practice load balancing and different data processing techniques.
+        </p>
+        <p class="project-text">
+          The script is essentially a multi-threaded NIDS (network intrusion detection system) that uses DBSCAN (density-based spatial clustering with noise)
+          clustering in order to gather all traffic to and from the system it is ran on and classify it with the cluster that it most
+          likely belongs to. It dynamically changes clusters and tries to filter out noise (due to a bunch of different packets from multiple
+          sources), showly creating a map of all clusters and all sent/received packets. It then dynamically assigns certain clusters as "suspicious"
+          based on relative cluster size and activity. It is definitely faulty as of now, but it is a proof-of-concept. Some ways to make this much
+          more accurate is to add more features, such as the content of the packets, which could potentially be a fix I make in the future.
+
+        </p>
+        <a href="https://github.com/ankitmudunuri/dbscan-nids" class="gitlinks" target="_blank">
+          <p>Click on me to go to the GitHub page for this project!</p>
+        </a>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
+    <hr class="project-divider" />
     <a href="https://github.com/ankitmudunuri/passcrackai" class="gitlinks" target="_blank">
       <h2>PassCrackAI - A CLI-based Password Manager</h2>
     </a>
