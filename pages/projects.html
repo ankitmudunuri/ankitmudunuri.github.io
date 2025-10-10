@@ -76,6 +76,37 @@
 
   <div class="overview">
 
+    <a href="https://github.com/ankitmudunuri/vhd-efsd.git" class="gitlinks" target="_blank">
+      <h2>VHD Encryption and Fragmentation Self-Destructable Project</h2>
+    </a>
+    <hr class="text-divider" />
+    <div class="description">
+      <div class="project-text">
+        <img src="../files/images/projects/vhd-efsd.png" alt="VHD EFSD Demo" class="project-media"/>
+        <p class="project-text">
+          This started as me wanting a more hands-on way to protect local files <em>and</em> a reason to write more Rust. 
+          I kept asking: “What if a virtual drive never sits around as a single file?” So I built a proof-of-concept that 
+          encrypts a VHD and then breaks it into fragments using my Alphanumeric Key-Based Incrementational Fragmentation Algorithm (AKIFA).
+          It's local-first, a bit opinionated, and definitely still evolving—but it works well enough to show the idea.
+        </p>
+        <p class="project-text">
+          Flow-wise, I set a login password and a separate encryption password (I like splitting auth from crypto). 
+          On login, the app reassembles and decrypts the VHD, mounts it so I can use it like a normal drive, and when I'm done 
+          it unmounts, re-encrypts, and fragments it into <em>N files x M chunks</em> based on AKIFA settings. 
+          The goal is that the “real” drive only exists during an authenticated session; at rest, it's just encrypted shards.
+        </p>
+        <p class="project-text">
+          Things I learned (and fought with): automating Windows VHD mounting, chunk layout strategies that aren't painful to rebuild, 
+          and key handling that doesn't turn into a single point of failure. Next up: TPM support to hold a master key (combined with the user password) 
+          and a self-destruct routine that wipes fragments after five failed logins. It's still a WIP, but I'm enjoying pushing it toward something I'd trust daily.
+        </p>
+        <a href="https://github.com/ankitmudunuri/vhd-efsd.git" class="gitlinks" target="_blank">
+          <p>Click on me to go to the GitHub page for this project!</p>
+        </a>
+      </div>
+    </div>
+    <hr class="text-divider" />
+
 
     <a href="https://github.com/ankitmudunuri/dbscan-nids" class="gitlinks" target="_blank">
       <h2>DBSCAN-based Network Intrusion Detection System</h2>
